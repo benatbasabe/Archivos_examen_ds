@@ -17,13 +17,10 @@ colnames(muestra08) <- c("nif", "nombre", "genero")
 
 
 #Modificamos Expresiones regulares del Nif
-library(tidyverse)
-
+library(tidyr)
 regexp <- "([[:digit:]]{8})([[:alpha:]]{1})"
-
-muestra08$genero_imp <- grepl(pattern = regexp, x = muestra08$nif)
-
+muestra08$nif_correccion <- grepl(pattern=regexp,x=muestra08$nif)
 muestra08 <- muestra08%>%
-  filter(genero_imp==T)
+  filter(nif_correccion==T)
 
-View(muestra08) 
+View(muestra08)
