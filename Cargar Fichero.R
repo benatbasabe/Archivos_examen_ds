@@ -16,7 +16,7 @@ colnames(muestra08) <- c("nif", "nombre", "genero")
 
 
 
-#Expresiones regulares nif
+#Modificamos Expresiones regulares del Nif
 library(tidyverse)
 
 regexp <- "([[:digit:]]{8})([[:alpha:]]{1})"
